@@ -19,6 +19,8 @@
 		78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */; };
 		78E2BED023E2DCEB00FD51BE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 78E2BECF23E2DCEB00FD51BE /* SDWebImage */; };
 		78E2BED223E2E0C900FD51BE /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED123E2E0C900FD51BE /* NetworkInteractor.swift */; };
+		78E2BED623E2E26A00FD51BE /* GetBeersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED523E2E26A00FD51BE /* GetBeersInteractor.swift */; };
+		78E2BED923E2E83400FD51BE /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED823E2E83400FD51BE /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		78E2BEC923E2C97700FD51BE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		78E2BED123E2E0C900FD51BE /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		78E2BED523E2E26A00FD51BE /* GetBeersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBeersInteractor.swift; sourceTree = "<group>"; };
+		78E2BED823E2E83400FD51BE /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				78E2BEBA23E2C45C00FD51BE /* AppDelegate */,
 				78E2BEBD23E2C75000FD51BE /* Coordinator */,
 				78E2BEBB23E2C49C00FD51BE /* LaunchScreen */,
+				78E2BED723E2E28700FD51BE /* Models */,
 				78E2BECB23E2D67400FD51BE /* Networking */,
 				78E2BEBC23E2C4D800FD51BE /* Resourses */,
 				78E2BEC023E2C79300FD51BE /* UI */,
@@ -142,10 +147,19 @@
 		78E2BECB23E2D67400FD51BE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				78E2BED523E2E26A00FD51BE /* GetBeersInteractor.swift */,
 				78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */,
 				78E2BED123E2E0C900FD51BE /* NetworkInteractor.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		78E2BED723E2E28700FD51BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BED823E2E83400FD51BE /* Beer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,8 @@
 				78E2BEC323E2C7F300FD51BE /* MainNavigationController.swift in Sources */,
 				78E2BEA923E2BF8F00FD51BE /* SceneDelegate.swift in Sources */,
 				78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */,
+				78E2BED923E2E83400FD51BE /* Beer.swift in Sources */,
+				78E2BED623E2E26A00FD51BE /* GetBeersInteractor.swift in Sources */,
 				78E2BED223E2E0C900FD51BE /* NetworkInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
