@@ -24,6 +24,7 @@
 		78E2BEDD23E2EB1500FD51BE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */; };
 		78E2BEE023E2EE6B00FD51BE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEDF23E2EE6B00FD51BE /* UIViewController+Extensions.swift */; };
 		78E2BEE223E2FB8900FD51BE /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */; };
+		78E2BEE523E2FC2200FD51BE /* ClassNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEE423E2FC2100FD51BE /* ClassNaming.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		78E2BEDF23E2EE6B00FD51BE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		78E2BEE423E2FC2100FD51BE /* ClassNaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNaming.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				78E2BEDE23E2EE3900FD51BE /* Extensions */,
 				78E2BEDB23E2EAFA00FD51BE /* LoadingView */,
+				78E2BEE323E2FBF600FD51BE /* Protocols */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -193,6 +196,14 @@
 				78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78E2BEE323E2FBF600FD51BE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BEE423E2FC2100FD51BE /* ClassNaming.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				78E2BEA923E2BF8F00FD51BE /* SceneDelegate.swift in Sources */,
 				78E2BEE223E2FB8900FD51BE /* UITableView+Extensions.swift in Sources */,
 				78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */,
+				78E2BEE523E2FC2200FD51BE /* ClassNaming.swift in Sources */,
 				78E2BED923E2E83400FD51BE /* Beer.swift in Sources */,
 				78E2BED623E2E26A00FD51BE /* GetBeersInteractor.swift in Sources */,
 				78E2BED223E2E0C900FD51BE /* NetworkInteractor.swift in Sources */,
