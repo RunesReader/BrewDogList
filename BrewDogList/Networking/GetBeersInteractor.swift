@@ -17,7 +17,7 @@ protocol GetBeers: UIViewController {
 }
 
 extension GetBeers {
-    func startGetBeersInteractor(success: @escaping ([Beer]) -> ()) {
+    func startGetBeersInteractor(itemsPerPage: Int, page: Int, success: @escaping ([Beer]) -> ()) {
         let handler: NetworkInteractor<[Beer]>.NetworkStateHandler = { [weak self] event in
             switch event {
             case .notLoaded:
@@ -30,10 +30,13 @@ extension GetBeers {
                 })
             case .failLoading(let error):
                 self?.loadingView?.hide(completion: {
-                    
+                    self?.showErrorAlert(error.error)
                 })
             }
         }
+        
+        getBeersInteractor = NetworkInteractor.getBeers(itemsPerPage: itemsPerPage, page: page, stateHandler: handler)
+        getBeersInteractor?.execute()
     }
     
     func stopGetBeersInteractor() {
@@ -42,7 +45,7 @@ extension GetBeers {
 }
 
 extension NetworkInteractor where ResponseModel == [Beer] {
-    static func getBeers(with itemsPerPage: Int, page: Int, stateHandler: @escaping NetworkStateHandler) -> NetworkInteractor {
+    static func getBeers(itemsPerPage: Int, page: Int, stateHandler: @escaping NetworkStateHandler) -> NetworkInteractor {
         var settingsModel = NetworkSettingModel()
         if let url = URL(string: Endpoint.getBeers + "page=\(page)&per_page=\(itemsPerPage)") {
             let request = URLRequest(url: url)
