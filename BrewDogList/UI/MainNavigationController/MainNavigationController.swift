@@ -10,4 +10,15 @@ import UIKit
 
 final class MainNavigationController: UINavigationController {
     
+    // MARK: - UIViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupUI()
+    }
+    
+    // MARK: - Private
+    private func setupUI() {
+        navigationBar.tintColor = UIColor.darkGray
+    }
 }

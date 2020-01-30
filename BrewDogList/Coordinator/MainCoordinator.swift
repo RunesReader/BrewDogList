@@ -28,11 +28,16 @@ final class MainCoordinator {
         let handler: StartViewEventHandler = { [weak self] event in
             switch event {
             case .start:
-                print("Show next screen")
+                self?.showBeersScreen()
             }
         }
         
         let controller = StartViewController(with: handler)
         rootNavigationVC.setViewControllers([controller], animated: true)
+    }
+    
+    private func showBeersScreen() {
+        let controller = BeersViewController()
+        rootNavigationVC.pushViewController(controller, animated: true)
     }
 }
