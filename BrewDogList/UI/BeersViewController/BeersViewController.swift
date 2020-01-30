@@ -14,6 +14,7 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     struct Config {
         static let startPage = 1
         static let perPage = 20
+        static let infiniteScrollMargin = 3
         static let title = "Beers List"
     }
     
@@ -43,10 +44,7 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
-            self?.currentPage += 1
-            self?.beers = models
-        }
+        requestNextPage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,22 +65,27 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
         beers = []
     }
     
+    private func requestNextPage() {
+        startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
+            if let this = self, !models.isEmpty {
+                this.currentPage += 1
+                this.beers = this.beers + models
+            }
+        }
+    }
+    
     // MARK: - <UITableViewDataSource>
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return beers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = indexPath.row
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerCell.className, for: indexPath) as? BeerCell else { return UITableViewCell() }
-        cell.viewModel = BeerCell.ViewModel(with: beers[indexPath.row])
+        cell.viewModel = BeerCell.ViewModel(with: beers[row])
         
-        if indexPath.row == beers.count - 3 {
-            startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
-                if let this = self, !models.isEmpty {
-                    this.currentPage += 1
-                    this.beers = this.beers + models
-                }
-            }
+        if row == beers.count - Config.infiniteScrollMargin {
+            requestNextPage()
         }
         
         return cell
