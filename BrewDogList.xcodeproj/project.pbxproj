@@ -23,6 +23,7 @@
 		78E2BED923E2E83400FD51BE /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED823E2E83400FD51BE /* Beer.swift */; };
 		78E2BEDD23E2EB1500FD51BE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */; };
 		78E2BEE023E2EE6B00FD51BE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEDF23E2EE6B00FD51BE /* UIViewController+Extensions.swift */; };
+		78E2BEE223E2FB8900FD51BE /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		78E2BED823E2E83400FD51BE /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		78E2BEDF23E2EE6B00FD51BE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				78E2BEDF23E2EE6B00FD51BE /* UIViewController+Extensions.swift */,
+				78E2BEE123E2FB8900FD51BE /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */,
 				78E2BEC323E2C7F300FD51BE /* MainNavigationController.swift in Sources */,
 				78E2BEA923E2BF8F00FD51BE /* SceneDelegate.swift in Sources */,
+				78E2BEE223E2FB8900FD51BE /* UITableView+Extensions.swift in Sources */,
 				78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */,
 				78E2BED923E2E83400FD51BE /* Beer.swift in Sources */,
 				78E2BED623E2E26A00FD51BE /* GetBeersInteractor.swift in Sources */,
