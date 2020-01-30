@@ -78,6 +78,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backView" destination="zPa-6M-2Yl" id="EGK-9f-oJj"/>
+                <outlet property="beerImageView" destination="sy7-xC-5q7" id="yrf-B4-kCw"/>
+                <outlet property="descriptionLabel" destination="vzr-hv-ZN3" id="AGj-tz-JOT"/>
+                <outlet property="nameLabel" destination="cdi-au-HLV" id="ECd-NZ-8bc"/>
+                <outlet property="taglineLabel" destination="GRP-N7-0iC" id="zSy-Gv-SZX"/>
             </connections>
             <point key="canvasLocation" x="-12.318840579710146" y="-86.049107142857139"/>
         </tableViewCell>

@@ -30,6 +30,7 @@
 		78E2BEEC23E2FCD000FD51BE /* BeersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEEB23E2FCD000FD51BE /* BeersView.swift */; };
 		78E2BEF023E2FCFF00FD51BE /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEEE23E2FCFF00FD51BE /* BeerCell.swift */; };
 		78E2BEF123E2FCFF00FD51BE /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E2BEEF23E2FCFF00FD51BE /* BeerCell.xib */; };
+		78E2BEF423E3081400FD51BE /* LoadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEF323E3081400FD51BE /* LoadImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		78E2BEEB23E2FCD000FD51BE /* BeersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersView.swift; sourceTree = "<group>"; };
 		78E2BEEE23E2FCFF00FD51BE /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
 		78E2BEEF23E2FCFF00FD51BE /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		78E2BEF323E3081400FD51BE /* LoadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			children = (
 				78E2BEDE23E2EE3900FD51BE /* Extensions */,
 				78E2BEDB23E2EAFA00FD51BE /* LoadingView */,
+				78E2BEF223E307F400FD51BE /* Others */,
 				78E2BEE323E2FBF600FD51BE /* Protocols */,
 			);
 			path = Libs;
@@ -235,6 +238,14 @@
 				78E2BEEF23E2FCFF00FD51BE /* BeerCell.xib */,
 			);
 			path = BeerCell;
+			sourceTree = "<group>";
+		};
+		78E2BEF223E307F400FD51BE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BEF323E3081400FD51BE /* LoadImageService.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				78E2BEBF23E2C77B00FD51BE /* MainCoordinator.swift in Sources */,
 				78E2BEDD23E2EB1500FD51BE /* LoadingView.swift in Sources */,
 				78E2BEE023E2EE6B00FD51BE /* UIViewController+Extensions.swift in Sources */,
+				78E2BEF423E3081400FD51BE /* LoadImageService.swift in Sources */,
 				78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */,
 				78E2BEEC23E2FCD000FD51BE /* BeersView.swift in Sources */,
 				78E2BEC323E2C7F300FD51BE /* MainNavigationController.swift in Sources */,

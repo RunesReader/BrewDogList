@@ -17,11 +17,18 @@ final class BeerCell: UITableViewCell, ClassNaming {
     
     // MARK: - ViewModel
     final class ViewModel {
-        
+        var imageURL = String()
+        var name = String()
+        var tagline = String()
+        var description = String()
     }
     
     // MARK: - IBOutlets
     @IBOutlet weak var backView: UIView?
+    @IBOutlet weak var beerImageView: UIImageView?
+    @IBOutlet weak var nameLabel: UILabel?
+    @IBOutlet weak var taglineLabel: UILabel?
+    @IBOutlet weak var descriptionLabel: UILabel?
     
     // MARK: - Properties
     var viewModel: ViewModel = ViewModel() {
