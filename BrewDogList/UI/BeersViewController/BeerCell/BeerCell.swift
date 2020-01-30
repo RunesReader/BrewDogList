@@ -33,8 +33,15 @@ final class BeerCell: UITableViewCell, ClassNaming {
     // MARK: - Properties
     var viewModel: ViewModel = ViewModel() {
         didSet {
-            
+            LoadImageService.loadImage(with: .medium, urlString: viewModel.imageURL, imageView: beerImageView)
+            nameLabel?.text = viewModel.name
+            taglineLabel?.text = viewModel.tagline
+            descriptionLabel?.text = viewModel.description
         }
+    }
+    
+    private var views: [UIView?] {
+        return [backView, beerImageView]
     }
     
     // MARK: - NSObject
@@ -47,7 +54,20 @@ final class BeerCell: UITableViewCell, ClassNaming {
     
     // MARK: - Private
     private func setupUI() {
-        backView?.layer.cornerRadius = Config.backRadius
-        backView?.layer.masksToBounds = true
+        views.forEach {
+            $0?.layer.cornerRadius = Config.backRadius
+            $0?.layer.masksToBounds = true
+        }
+    }
+}
+
+extension BeerCell.ViewModel {
+    convenience init(with model: Beer) {
+        self.init()
+        
+        imageURL = model.imageURL
+        name = model.name
+        tagline = model.tagline
+        description = model.description
     }
 }
