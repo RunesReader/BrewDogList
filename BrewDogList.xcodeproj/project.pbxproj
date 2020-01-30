@@ -21,6 +21,7 @@
 		78E2BED223E2E0C900FD51BE /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED123E2E0C900FD51BE /* NetworkInteractor.swift */; };
 		78E2BED623E2E26A00FD51BE /* GetBeersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED523E2E26A00FD51BE /* GetBeersInteractor.swift */; };
 		78E2BED923E2E83400FD51BE /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BED823E2E83400FD51BE /* Beer.swift */; };
+		78E2BEDD23E2EB1500FD51BE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		78E2BED123E2E0C900FD51BE /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
 		78E2BED523E2E26A00FD51BE /* GetBeersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBeersInteractor.swift; sourceTree = "<group>"; };
 		78E2BED823E2E83400FD51BE /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				78E2BEBA23E2C45C00FD51BE /* AppDelegate */,
 				78E2BEBD23E2C75000FD51BE /* Coordinator */,
 				78E2BEBB23E2C49C00FD51BE /* LaunchScreen */,
+				78E2BEDA23E2EAB500FD51BE /* Libs */,
 				78E2BED723E2E28700FD51BE /* Models */,
 				78E2BECB23E2D67400FD51BE /* Networking */,
 				78E2BEBC23E2C4D800FD51BE /* Resourses */,
@@ -162,6 +165,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		78E2BEDA23E2EAB500FD51BE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BEDB23E2EAFA00FD51BE /* LoadingView */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		78E2BEDB23E2EAFA00FD51BE /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BEDC23E2EB1500FD51BE /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +261,7 @@
 				78E2BEC723E2C95200FD51BE /* StartViewController.swift in Sources */,
 				78E2BEA723E2BF8F00FD51BE /* AppDelegate.swift in Sources */,
 				78E2BEBF23E2C77B00FD51BE /* MainCoordinator.swift in Sources */,
+				78E2BEDD23E2EB1500FD51BE /* LoadingView.swift in Sources */,
 				78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */,
 				78E2BEC323E2C7F300FD51BE /* MainNavigationController.swift in Sources */,
 				78E2BEA923E2BF8F00FD51BE /* SceneDelegate.swift in Sources */,
