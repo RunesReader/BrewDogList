@@ -19,18 +19,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-6M-2Yl" userLabel="backView">
                         <rect key="frame" x="16" y="8" width="457" height="163"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sy7-xC-5q7" userLabel="beerImageView">
-                                <rect key="frame" x="8" y="8" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="aFd-D2-rg4"/>
-                                    <constraint firstAttribute="height" constant="75" id="erq-Qf-CaL"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-Jb-i0o" userLabel="stackView">
-                                <rect key="frame" x="107" y="8" width="334" height="147"/>
+                                <rect key="frame" x="88" y="8" width="353" height="147"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-au-HLV" userLabel="nameLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="eM7-XE-Cij"/>
                                         </constraints>
@@ -39,29 +32,48 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="GRP-N7-0iC" userLabel="taglineLabel">
-                                        <rect key="frame" x="0.0" y="33" width="334" height="21"/>
+                                        <rect key="frame" x="0.0" y="33" width="353" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="hwN-Ca-1hU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzr-hv-ZN3" userLabel="descriptionLabel">
-                                        <rect key="frame" x="0.0" y="62" width="334" height="85"/>
+                                        <rect key="frame" x="0.0" y="62" width="353" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCd-xK-B8s" userLabel="roundView">
+                                <rect key="frame" x="4" y="4" width="76" height="76"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sy7-xC-5q7" userLabel="beerImageView">
+                                        <rect key="frame" x="5.5" y="5.5" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="aFd-D2-rg4"/>
+                                            <constraint firstAttribute="height" constant="65" id="erq-Qf-CaL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="8i3-iG-oWo"/>
+                                    <constraint firstAttribute="width" constant="76" id="PHI-C2-fTc"/>
+                                    <constraint firstItem="sy7-xC-5q7" firstAttribute="centerY" secondItem="mCd-xK-B8s" secondAttribute="centerY" id="fii-eL-Ab5"/>
+                                    <constraint firstItem="sy7-xC-5q7" firstAttribute="centerX" secondItem="mCd-xK-B8s" secondAttribute="centerX" id="h0r-6k-ugv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mCd-xK-B8s" firstAttribute="leading" secondItem="zPa-6M-2Yl" secondAttribute="leading" constant="4" id="8GE-gp-ORW"/>
                             <constraint firstItem="k9V-Jb-i0o" firstAttribute="top" secondItem="zPa-6M-2Yl" secondAttribute="top" constant="8" id="H4f-ra-Mg5"/>
-                            <constraint firstItem="k9V-Jb-i0o" firstAttribute="leading" secondItem="sy7-xC-5q7" secondAttribute="trailing" constant="24" id="PqN-iu-6Fg"/>
-                            <constraint firstItem="sy7-xC-5q7" firstAttribute="top" secondItem="zPa-6M-2Yl" secondAttribute="top" constant="8" id="bdV-gT-jO9"/>
-                            <constraint firstItem="sy7-xC-5q7" firstAttribute="leading" secondItem="zPa-6M-2Yl" secondAttribute="leading" constant="8" id="mi3-ec-Eri"/>
+                            <constraint firstItem="mCd-xK-B8s" firstAttribute="top" secondItem="zPa-6M-2Yl" secondAttribute="top" constant="4" id="MNX-kV-Acv"/>
+                            <constraint firstItem="k9V-Jb-i0o" firstAttribute="leading" secondItem="mCd-xK-B8s" secondAttribute="trailing" constant="8" id="jIe-94-MT0"/>
                             <constraint firstAttribute="bottom" secondItem="k9V-Jb-i0o" secondAttribute="bottom" constant="8" id="pTy-6w-8jr"/>
                             <constraint firstAttribute="trailing" secondItem="k9V-Jb-i0o" secondAttribute="trailing" constant="16" id="srY-KA-bWV"/>
                         </constraints>
@@ -81,6 +93,7 @@
                 <outlet property="beerImageView" destination="sy7-xC-5q7" id="yrf-B4-kCw"/>
                 <outlet property="descriptionLabel" destination="vzr-hv-ZN3" id="AGj-tz-JOT"/>
                 <outlet property="nameLabel" destination="cdi-au-HLV" id="ECd-NZ-8bc"/>
+                <outlet property="roundView" destination="mCd-xK-B8s" id="L8n-hg-Myq"/>
                 <outlet property="taglineLabel" destination="GRP-N7-0iC" id="zSy-Gv-SZX"/>
             </connections>
             <point key="canvasLocation" x="-12.318840579710146" y="-86.049107142857139"/>

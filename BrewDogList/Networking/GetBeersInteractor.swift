@@ -12,7 +12,7 @@ protocol GetBeers: UIViewController {
     var loadingView: LoadingView? {set get}
     var getBeersInteractor: NetworkInteractor<[Beer]>? {set get}
     
-    func startGetBeersInteractor(success: @escaping ([Beer]) -> ())
+    func startGetBeersInteractor(itemsPerPage: Int, page: Int, success: @escaping ([Beer]) -> ())
     func stopGetBeersInteractor()
 }
 

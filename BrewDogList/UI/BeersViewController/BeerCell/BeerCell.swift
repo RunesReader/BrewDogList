@@ -13,6 +13,8 @@ final class BeerCell: UITableViewCell, ClassNaming {
     // MARK: - Constants
     struct Config {
         static let backRadius: CGFloat = 8.0
+        static let borderWidth: CGFloat = 1.0
+        static let borderColor = UIColor.gray.cgColor
     }
     
     // MARK: - ViewModel
@@ -25,6 +27,7 @@ final class BeerCell: UITableViewCell, ClassNaming {
     
     // MARK: - IBOutlets
     @IBOutlet weak var backView: UIView?
+    @IBOutlet weak var roundView: UIView?
     @IBOutlet weak var beerImageView: UIImageView?
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var taglineLabel: UILabel?
@@ -54,9 +57,14 @@ final class BeerCell: UITableViewCell, ClassNaming {
     
     // MARK: - Private
     private func setupUI() {
-        views.forEach {
-            $0?.layer.cornerRadius = Config.backRadius
-            $0?.layer.masksToBounds = true
+        backView?.layer.cornerRadius = Config.backRadius
+        backView?.layer.masksToBounds = true
+        
+        if let roundView = roundView {
+            roundView.layer.cornerRadius = min(roundView.bounds.height, roundView.bounds.width) / 2.0
+            roundView.layer.borderColor = Config.borderColor
+            roundView.layer.borderWidth = Config.borderWidth
+            roundView.layer .masksToBounds = true
         }
     }
 }

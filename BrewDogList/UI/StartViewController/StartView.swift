@@ -12,7 +12,7 @@ final class StartView: UIView {
     
     // MARK: - Constants
     struct Config {
-        static let buttonTitle = "Go!"
+        static let buttonTitle = "Let's go!"
     }
     
     // MARK: - ViewModel
