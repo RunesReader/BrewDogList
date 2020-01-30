@@ -16,6 +16,7 @@
 		78E2BEC723E2C95200FD51BE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEC523E2C95200FD51BE /* StartViewController.swift */; };
 		78E2BEC823E2C95200FD51BE /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E2BEC623E2C95200FD51BE /* StartViewController.xib */; };
 		78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEC923E2C97700FD51BE /* StartView.swift */; };
+		78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		78E2BEC523E2C95200FD51BE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		78E2BEC623E2C95200FD51BE /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
 		78E2BEC923E2C97700FD51BE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				78E2BEBA23E2C45C00FD51BE /* AppDelegate */,
 				78E2BEBD23E2C75000FD51BE /* Coordinator */,
 				78E2BEBB23E2C49C00FD51BE /* LaunchScreen */,
+				78E2BECB23E2D67400FD51BE /* Networking */,
 				78E2BEBC23E2C4D800FD51BE /* Resourses */,
 				78E2BEC023E2C79300FD51BE /* UI */,
 			);
@@ -130,6 +133,14 @@
 				78E2BEC623E2C95200FD51BE /* StartViewController.xib */,
 			);
 			path = StartViewController;
+			sourceTree = "<group>";
+		};
+		78E2BECB23E2D67400FD51BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */,
 				78E2BEC323E2C7F300FD51BE /* MainNavigationController.swift in Sources */,
 				78E2BEA923E2BF8F00FD51BE /* SceneDelegate.swift in Sources */,
+				78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
