@@ -44,6 +44,7 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewWillAppear(animated)
         
         startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
+            self?.currentPage += 1
             self?.beers = models
         }
     }
@@ -52,6 +53,7 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewWillDisappear(animated)
         
         stopGetBeersInteractor()
+        clearData()
     }
     
     // MARK: - Private
@@ -60,6 +62,10 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
         tableView?.register(cellClass: BeerCell.self)
     }
     
+    private func clearData() {
+        currentPage = Config.startPage
+        beers = []
+    }
     
     // MARK: - <UITableViewDataSource>
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
