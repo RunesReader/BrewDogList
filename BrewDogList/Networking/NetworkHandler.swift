@@ -15,5 +15,5 @@ enum NetConfig {
 }
 
 enum Endpoint {
-    static let getBeers = NetConfig.baseURL + "beers"
+    static let getBeers = NetConfig.baseURL + "beers?"
 }
