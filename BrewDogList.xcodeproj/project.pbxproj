@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		78E2BEC823E2C95200FD51BE /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E2BEC623E2C95200FD51BE /* StartViewController.xib */; };
 		78E2BECA23E2C97700FD51BE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BEC923E2C97700FD51BE /* StartView.swift */; };
 		78E2BECD23E2D6B200FD51BE /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2BECC23E2D6B200FD51BE /* NetworkHandler.swift */; };
+		78E2BED023E2DCEB00FD51BE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 78E2BECF23E2DCEB00FD51BE /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E2BED023E2DCEB00FD51BE /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +161,9 @@
 			dependencies = (
 			);
 			name = BrewDogList;
+			packageProductDependencies = (
+				78E2BECF23E2DCEB00FD51BE /* SDWebImage */,
+			);
 			productName = BrewDogList;
 			productReference = 78E2BEA323E2BF8F00FD51BE /* BrewDogList.app */;
 			productType = "com.apple.product-type.application";
@@ -187,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 78E2BE9A23E2BF8F00FD51BE;
+			packageReferences = (
+				78E2BECE23E2DCEB00FD51BE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 78E2BEA423E2BF8F00FD51BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -414,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78E2BECE23E2DCEB00FD51BE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78E2BECF23E2DCEB00FD51BE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E2BECE23E2DCEB00FD51BE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78E2BE9B23E2BF8F00FD51BE /* Project object */;
 }
