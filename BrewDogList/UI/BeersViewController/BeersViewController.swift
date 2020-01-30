@@ -25,6 +25,8 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - Properties
     private var beers = [Beer]() {
         didSet {
+            print("Current number = \(currentPage)")
+            print("Array count = \(beers.count)")
             tableView?.reloadData()
         }
     }
@@ -67,6 +69,15 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerCell.className, for: indexPath) as? BeerCell else { return UITableViewCell() }
         cell.viewModel = BeerCell.ViewModel(with: beers[indexPath.row])
+        
+        if indexPath.row == beers.count - 3 {
+            startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
+                if let this = self, !models.isEmpty {
+                    this.currentPage += 1
+                    this.beers = this.beers + models
+                }
+            }
+        }
         
         return cell
     }
