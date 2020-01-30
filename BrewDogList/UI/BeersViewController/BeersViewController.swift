@@ -34,35 +34,23 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     private var currentPage = Config.startPage
     var getBeersInteractor: NetworkInteractor<[Beer]>?
     
+    // MARK: - Initializations and Deallocation
+    deinit {
+        stopGetBeersInteractor()
+    }
+    
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
         requestNextPage()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        stopGetBeersInteractor()
-        clearData()
     }
     
     // MARK: - Private
     private func setupUI() {
         title = Config.title
         tableView?.register(cellClass: BeerCell.self)
-    }
-    
-    private func clearData() {
-        currentPage = Config.startPage
-        beers = []
     }
     
     private func requestNextPage() {
