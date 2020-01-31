@@ -26,8 +26,6 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - Properties
     private var beers = [Beer]() {
         didSet {
-            print("Current number = \(currentPage)")
-            print("Array count = \(beers.count)")
             tableView?.reloadData()
         }
     }
@@ -55,7 +53,7 @@ final class BeersViewController: UIViewController, UITableViewDelegate, UITableV
     
     private func requestNextPage() {
         startGetBeersInteractor(itemsPerPage: Config.perPage, page: currentPage) { [weak self] models in
-            if let this = self, !models.isEmpty {
+            if let this = self, models.isNotEmpty {
                 this.currentPage += 1
                 this.beers = this.beers + models
             }
